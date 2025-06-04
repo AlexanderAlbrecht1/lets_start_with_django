@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 – Seite nicht gefunden</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f9f9fb;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #2c3e50;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 6rem;
+      color: #ff6b6b;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #ff6b6b;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #e04e4e;
+    }
+
+    .animation {
+      margin: 2rem auto;
+      width: 200px;
+      height: 200px;
+      position: relative;
+    }
+
+    .ghost {
+      width: 100px;
+      height: 100px;
+      background: white;
+      border: 3px solid #ff6b6b;
+      border-radius: 50% 50% 40% 40%;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      animation: float 3s ease-in-out infinite;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    .ghost::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 10px;
+      width: 80px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px #ff6b6b;
+    }
+
+    .eyes {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+    }
+
+    .eye {
+      width: 12px;
+      height: 12px;
+      background: #333;
+      border-radius: 50%;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translate(-50%, 0);
+      }
+      50% {
+        transform: translate(-50%, -20px);
+      }
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 4rem;
+      }
+      .animation {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>404</h1>
+    <h2>Diese Seite existiert (noch) nur in deiner Vorstellung 👻</h2>
+    <div class="animation">
+      <div class="ghost">
+        <div class="eyes">
+          <div class="eye"></div>
+          <div class="eye"></div>
+        </div>
+      </div>
+    </div>
+    <p>
+      Wir haben überall gesucht – im Cache, im Backend, sogar unter dem Sofa. Nichts gefunden.
+    </p>
+    <a href="/">Zurück zur Startseite</a>
+  </div>
+</body>
+</html>
