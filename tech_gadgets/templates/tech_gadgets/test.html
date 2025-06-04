@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Startseite</title>
+{% extends "base.html" %}
 
-    <h1>Wilkommen</h1>
+{% block title %}Liste{% endblock %}
 
+
+{% block content %}
     {% for gadget in gadget_list %}
-    <h2>
+    <h3>
       {{ gadget.name}} </a>
-    </h2>
+    </h3>
     
     {% endfor %}
-  </head>
-  <body></body>
-</html>
+{% endblock %}
